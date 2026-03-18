@@ -3,12 +3,11 @@ class Solution {
         int n = nums.length;
         int i = n - 2;
 
-        // Step 1: Find breakpoint
         while (i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
         }
 
-        // Step 2: Find next greater element and swap
+       
         if (i >= 0) {
             int j = n - 1;
             while (nums[j] <= nums[i]) {
@@ -17,7 +16,7 @@ class Solution {
             swap(nums, i, j);
         }
 
-        // Step 3: Reverse right part
+      
         reverse(nums, i + 1, n - 1);
     }
 
